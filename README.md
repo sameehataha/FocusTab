@@ -2,7 +2,7 @@ FocusTab Browser Extension 📝
 
 FocusTab is a minimalist browser extension designed to help users focus on their main goals by displaying personalized greetings, tasks, a motivational quote, and a TODO list on every new tab. It features a beautiful, randomly selected scenic background and a simple, intuitive interface.
 
-![FocusTab-extension](/preview.png.png)
+![FocusTab-extension](/preview.png)
 
 Live Demo:
 https://focus-tab-extension.netlify.app/
@@ -153,7 +153,7 @@ export default App
 
 Architectural Data Flow
 
-![architectural data flow]()
+![architectural data flow](/ArchitecturalDataFlow.png)
 
 Reducer.jsx
 
@@ -165,7 +165,7 @@ Features:
 
 -Returns a new state object based on the action type.
 
-![redux]()
+![redux](/redux.png)
 
 export const Reducer = (state,{type,payload}) => {
 
@@ -291,7 +291,9 @@ const quote = quotes[index].quote
 
 export const Task = () => {
   const { name, time, message, task, browserDispatch } = useBrowser();
+  
   const [isChecked, setIsChecked] = useState(false);
+  
   const [isTodoOpen,setIsTodoOpen] = useState(false)
 
   useEffect(() => {
@@ -781,7 +783,7 @@ Features:
   text-decoration: line-through;
 }
 
-![user experience flow]()
+![user experience flow](/Userexperienceflow.png)
 
 Persistence & Privacy
 
