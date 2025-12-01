@@ -153,7 +153,7 @@ export default App
 
 Architectural Data Flow
 
-![architectural data flow](/ArchitecturalDataFlow.png)
+![architectural data flow](/architecturaldataflow.png)
 
 Reducer.jsx
 
@@ -783,7 +783,7 @@ Features:
   text-decoration: line-through;
 }
 
-![user experience flow](/Userexperienceflow.png)
+![user experience flow](/userexpeirenceflow.png)
 
 Persistence & Privacy
 
