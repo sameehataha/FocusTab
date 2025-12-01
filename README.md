@@ -454,6 +454,7 @@ export const Task = () => {
   );
   
 };
+
 images.js
 
 This file exports an array of scenic image URLs used for random background selection.
