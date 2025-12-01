@@ -7,6 +7,39 @@ FocusTab is a minimalist browser extension designed to help users focus on their
 Live Demo:
 https://focus-tab-extension.netlify.app/
 
+🚀 Tech Stack
+
+Frontend Framework
+
+-React 18 - Modern UI library for building component-based interfaces
+
+-Vite - Lightning-fast build tool and development server
+
+State Management
+
+-React Context API - Global state management
+
+-useReducer Hook - Predictable state updates with reducer pattern
+
+Styling
+
+-CSS3 - Custom styling with CSS variables
+
+-Google Fonts - Bebas Neue font family
+
+-Material Icons - Icon library for UI elements
+
+
+Animation
+
+-Framer Motion - Production-ready animation library for smooth transitions
+
+-Utilities
+
+-UUID - Unique ID generation for todo items
+
+-LocalStorage API - Client-side data persistence
+
 ⭐ Like & Save for Later
 If you enjoy using FocusTab, consider starring or saving this browser extension for later use and updates!
 
@@ -483,6 +516,7 @@ Usage:
 A random quote is displayed on every new tab.
 
 Example:
+
 export const quotes = [
 
   { quote: "You must be the change you wish to see in the world. – Mahatma Gandhi" },
@@ -492,6 +526,7 @@ export const quotes = [
   // ...many more
   
 ]
+
 browser-extension.jsx
 
 This file defines the custom React Context for sharing state across the app and implements the reducer logic.
@@ -503,8 +538,11 @@ Features:
 -Exports useBrowser hook for easy context consumption.
 
 -Uses the Reducer for handling state transitions.
+
 import { createContext,useContext, useState,useReducer} from "react";
+
 import { Reducer } from "../reducer/Reducer";
+
 
 const initialValue = {
   name: "",
