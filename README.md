@@ -15,7 +15,7 @@ This is the main HTML file that serves as the entry point for the FocusTab exten
 - Sets the language to English and character encoding to UTF-8.<br>
 - Links the favicon (logo.png) and stylesheets.<br>
 - Loads the main JavaScript bundle (index-Bh3TeUh0.js) as a module.<br>
-- Provides a <div id="root"></div> where the React app mounts.
+- Provides a  id="root" where the React app mounts.
 <br>
 <!doctype html>
 <html lang="en">
