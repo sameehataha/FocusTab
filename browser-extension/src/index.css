@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+:root{
+    --text-color-primary: #F8FAFC;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.app{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.d-flex{
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.heading-1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-left: 2.5rem;
+    color: var(--text-color-primary)
+}
+.main-heading{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+.home-container {
+    color: var(--text-color-primary);
+    padding-top: 7rem;
+}
+
+.gap-lg {
+    gap: 5rem;
+}
+
+.main-heading {
+    font-size: 3.5rem;
+    line-height: 4rem;
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid var(--text-color-primary);
+    font-size: 3rem;
+    color: var(--text-color-primary);
+    width: 40vw;
+    text-align: center;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+.time{
+    font-size: 5.0rem;
+    color: #F8FAFC;
+    margin-top: 1.5rem;
+    margin-bottom: 2.0rem;
+}
+.message{
+    font-size: 4.0rem;
+    color: var(--text-color-primary)
+}
+.heading-3{
+    margin-top: 1.5rem;
+    font-size: 2.0rem;
+    color: var(--text-color-primary)
+}
+.task-contianer{
+    padding-top: 1.0rem;
+    height: 100vh;
+    position: relative;
+}
+.check {
+    width: 1.5rem;
+    height: 1rem;
+}
+.gap-sm{
+    gap: 0.25rem;
+}
+.strikethrough{
+   text-decoration: line-through; 
+}
+.heading-2 {
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--text-color-primary)
+}
+.button {
+    background-color: transparent;
+    border: none;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    color: var(--text-color-primary)
+}
+.cursor:hover{
+    cursor: pointer;
+}
+.quote-container{
+   width: 70vw;
+   margin-bottom: auto;
+   position: absolute;
+   bottom: 3.5rem;
+   text-align: center;
+   color: var(--text-color-primary)
+}
+.todo-btn-container{
+    right: 1rem;
+    top: 2rem;
+    position: absolute;
+}
