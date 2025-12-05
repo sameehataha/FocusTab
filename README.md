@@ -17,7 +17,7 @@ Once installed, FocusTab will automatically replace your default new tab page. S
 ![2img](/2img.png)
 ![3img](/3img.png)
 
-##Live Demo:
+## Live Demo:
 https://focus-tab-extension.netlify.app/
 
 ### 🚀 Tech Stack
