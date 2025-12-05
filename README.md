@@ -78,7 +78,8 @@ This is the main HTML file that serves as the entry point for the FocusTab exten
   </body>
 </html>
 <br>
-#### main.jsx<br>
+
+#### main.jsx <br>
 This file is the entry point for the React application. It mounts the React component tree to the DOM and wraps the app with a custom context provider for state management.<br>
 
 -Uses React 18’s createRoot for concurrent rendering.
