@@ -20,9 +20,9 @@ Once installed, FocusTab will automatically replace your default new tab page. S
 ##Live Demo:
 https://focus-tab-extension.netlify.app/
 
-###🚀 Tech Stack
+### 🚀 Tech Stack
 
-####Frontend Framework
+#### Frontend Framework
 
 -React 18 - Modern UI library for building component-based interfaces
 
