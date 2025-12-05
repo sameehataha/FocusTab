@@ -1,10 +1,11 @@
-FocusTab Browser Extension 📝
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/383676c5-4968-49c4-b091-eba45e209726" />FocusTab Browser Extension 📝
 
 FocusTab is a minimalist browser extension designed to help users focus on their main goals by displaying personalized greetings, tasks, a motivational quote, and a TODO list on every new tab. It features a beautiful, randomly selected scenic background and a simple, intuitive interface.
 
 ![FocusTab-extension](/preview1.png)
 
 ## Installation
+Once installed, FocusTab will automatically replace your default new tab page. Simply open a new tab to access your productivity dashboard.
 
 ### Firefox
 
@@ -16,12 +17,12 @@ FocusTab is a minimalist browser extension designed to help users focus on their
 ![2img](/2img.png)
 ![3img](/3img.png)
 
-Live Demo:
+##Live Demo:
 https://focus-tab-extension.netlify.app/
 
-🚀 Tech Stack
+###🚀 Tech Stack
 
-Frontend Framework
+####Frontend Framework
 
 -React 18 - Modern UI library for building component-based interfaces
 
@@ -55,7 +56,7 @@ Animation
 ⭐ Like & Save for Later
 If you enjoy using FocusTab, consider starring or saving this browser extension for later use and updates!
 
-index.html <br>
+#### index.html <br>
 This is the main HTML file that serves as the entry point for the FocusTab extension. It sets up the root element and includes the necessary assets.<br>
 - Sets the language to English and character encoding to UTF-8.<br>
 - Links the favicon (logo.png) and stylesheets.<br>
@@ -77,7 +78,7 @@ This is the main HTML file that serves as the entry point for the FocusTab exten
   </body>
 </html>
 <br>
-main.jsx<br>
+#### main.jsx<br>
 This file is the entry point for the React application. It mounts the React component tree to the DOM and wraps the app with a custom context provider for state management.<br>
 
 -Uses React 18’s createRoot for concurrent rendering.
@@ -85,7 +86,7 @@ This file is the entry point for the React application. It mounts the React comp
 -Wraps the App component in <StrictMode> for highlighting potential issues.
 
 -Uses BrwoserProvide (custom context) to manage browser extension state globally.
-
+ ```jsx
 import { StrictMode } from 'react'
 
 import { createRoot } from 'react-dom/client'
@@ -107,8 +108,8 @@ createRoot(document.getElementById('root')).render(
   </BrwoserProvide>
   
 )
-
-index.css
+ ```
+#### index.css
 
 This CSS file provides the overall styling for the extension. It uses a modern, clean, and focus-centric design.
 
@@ -123,7 +124,7 @@ Key Features:
 -Provides utility classes for flex layouts, alignment, spacing, and typography.
 
 -Styles inputs, buttons, and various containers for a cohesive look.
-
+```css
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
@@ -140,8 +141,8 @@ Key Features:
 }
 
 /* ... (many utility and component styles) ... */
-
-App.jsx
+```
+#### App.jsx
 
 This is the root component of FocusTab. It determines which UI (Home or Task) to show based on whether the user has entered their name.
 
@@ -154,7 +155,7 @@ Key Features:
 -Loads the user's name from localStorage and updates app state.
 
 -Renders either the Task component (if user name exists) or Home (for first-time users).
-
+ ```jsx
 import {images} from './db/images.js'
 
 import { Home } from "./pages/Home/Home.jsx"
@@ -195,23 +196,23 @@ function App() {
 }
 
 export default App
-
-Architectural Data Flow
+ ```
+# Architectural Data Flow
 
 ![architectural data flow](/architecturaldataflow.png)
 
-Reducer.jsx
+#### Reducer.jsx
 
 This file defines the reducer function for managing state in the custom context.
 
-Features:
+##### Features:
 
 -Handles actions for updating name, time, greeting message, task, and task deletion.
 
 -Returns a new state object based on the action type.
 
 ![redux](/redux.png)
-
+ ```jsx
 export const Reducer = (state,{type,payload}) => {
 
   switch (type){
@@ -243,19 +244,19 @@ export const Reducer = (state,{type,payload}) => {
   }
   
 }
-
-Home.jsx
+ ```
+#### Home.jsx
 
 This component asks the user for their name when they first visit FocusTab.
 
-Features:
+##### Features:
 
 -Displays a friendly greeting and prompts for the user’s name.
 
 -On pressing "Enter", stores the name in localStorage and updates global state.
 
 -Prevents default form submission to avoid unwanted page reloads.
-
+ ```jsx
 import { useBrowser } from "../../context/browser-extension"
 
 export const Home = () => {
@@ -302,12 +303,12 @@ export const Home = () => {
   )
   
 }
-
-Task.jsx
+ ```
+#### Task.jsx
 
 This is the main in-use component after the user provides their name. It presents the core features of the extension.
 
-Features:
+##### Features:
 
 -Displays current time and a time-of-day greeting.
 
@@ -320,7 +321,7 @@ Features:
 -Integrates a toggleable TODO list via the Todo component.
 
 -Persists and restores task and checkbox state across sessions/days using localStorage.
-
+ ```jsx
 import { Fragment, useEffect, useState } from "react";
 
 import { useBrowser } from "../../context/browser-extension";
@@ -499,12 +500,12 @@ export const Task = () => {
   );
   
 };
-
-images.js
+ ```
+#### images.js
 
 This file exports an array of scenic image URLs used for random background selection.
 
-Usage:
+##### Usage:
 
 - Every time the app loads, a random image is chosen for the background.
 
@@ -519,11 +520,11 @@ export const images = [
   
 ]
 
-quotes.js
+#### quotes.js
 
 This file contains an array of motivational quotes used on FocusTab.
 
-Usage:
+##### Usage:
 
 A random quote is displayed on every new tab.
 
@@ -550,7 +551,7 @@ Features:
 -Exports useBrowser hook for easy context consumption.
 
 -Uses the Reducer for handling state transitions.
-
+ ```jsx 
 import { createContext,useContext, useState,useReducer} from "react";
 
 import { Reducer } from "../reducer/Reducer";
@@ -584,13 +585,12 @@ const BrwoserProvide = ({children}) => {
 const useBrowser = () => useContext(BrowserContext)
 
 export {useBrowser,BrwoserProvide}
-
-Todo.jsx
+ ```
+#### Todo.jsx
 
 This component implements a persistent, animated TODO list.
 
-
-Features:
+##### Features:
 
 -Uses state and localStorage to keep todos across sessions.
 
@@ -599,7 +599,7 @@ Features:
 -Uses uuid for unique IDs and motion for animations.
 
 -Provides keyboard interaction for fast entry.
-
+ ```jsx
 import { useEffect, useState } from "react";
 
 import { v4 as uuid } from "uuid";
@@ -754,19 +754,19 @@ export const Todo = () => {
   );
   
 };
-
-Todo.css
+ ```
+#### Todo.css
 
 This CSS file styles the TODO list modal.
 
-Features:
+##### Features:
 
 -Styles for the floating TODO button, modal container, and list items.
 
 -Responsive container width/height, with scroll for overflow.
 
 -Input fields, strike-through for completed items, and delete button effects.
-
+```css
 .todo-btn{
   font-size: 2rem;
   background-color: rgb(209, 206, 206);
@@ -833,24 +833,24 @@ Features:
 .strikethrough{
   text-decoration: line-through;
 }
-
+``` 
 ![user experience flow](/userexpeirenceflow.png)
 
-Persistence & Privacy
+##### Persistence & Privacy
 
 FocusTab only uses your browser's localStorage. No user data is ever sent to a server.
 
-🚀 Try It Live
+##### 🚀 Try It Live
 
 https://focus-tab-extension.netlify.app/
 
-Browser APIs
+#### Browser APIs
 
 LocalStorage API - Client-side storage
 
 Date API - Time management
 
-🤝 Contributing
+##### 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -864,16 +864,16 @@ Contributions are welcome! Please follow these steps:
 
 -Open a Pull Request
 
-📝 License
+##### 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-👤 Author
+##### 👤 Author
 Sameeha Taha
 
 GitHub: @sameehataha
 
-🙏 Acknowledgments
+##### 🙏 Acknowledgments
 
 Background images from Pexels
 
@@ -884,6 +884,6 @@ Icons from Material Icons
 Font from Google Fonts
 
 
-📧 Contact
+##### 📧 Contact
 
 For questions or feedback, please open an issue on GitHub.
