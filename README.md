@@ -1,4 +1,4 @@
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/383676c5-4968-49c4-b091-eba45e209726" />FocusTab Browser Extension 📝
+# FocusTab Browser Extension 📝
 
 FocusTab is a minimalist browser extension designed to help users focus on their main goals by displaying personalized greetings, tasks, a motivational quote, and a TODO list on every new tab. It features a beautiful, randomly selected scenic background and a simple, intuitive interface.
 
