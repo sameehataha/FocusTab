@@ -12,6 +12,9 @@ FocusTab is a minimalist browser extension designed to help users focus on their
 2. Click "Add to Firefox"
 
 ## Screenshots
+![mainpreview](/mainpreview)
+![2img](/2img)
+![3img](/3img)
 
 Live Demo:
 https://focus-tab-extension.netlify.app/
